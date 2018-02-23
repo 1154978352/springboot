@@ -1,12 +1,9 @@
 package com.gwd.dao;
-
 import java.util.concurrent.TimeUnit;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Repository;
-
 /** 
 * @ProjectName spring-boot-redis
 * @author JackHisen(gu.weidong) 
