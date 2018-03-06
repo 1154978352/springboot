@@ -1,5 +1,6 @@
 package com.gwd.aop;
 
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
@@ -38,8 +39,10 @@ public class WebLogAspect {
 	}
 	
 	@Around("weblog()")
-	public void webAround() {
-		System.out.println("环绕通知……");
+	public void webAround(ProceedingJoinPoint pjp) throws Throwable {
+		System.out.println("环绕通知前……");
+		pjp.proceed();
+		System.out.println("环绕通知后……");
 	}
 	
 	@AfterReturning("weblog()")

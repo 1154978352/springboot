@@ -19,6 +19,5 @@ public class TestController {
 	@RequestMapping("/testAop")
 	public void testAop() {
 		System.out.println("test进行中");
-		return ;
 	}
 }
