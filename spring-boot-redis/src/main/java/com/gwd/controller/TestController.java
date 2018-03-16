@@ -18,7 +18,7 @@ public class TestController {
     @RequestMapping("/testRedis")
     public String testRedis(){
     	System.out.println("------------------------");
-        redisDao.setKey("name","gwd");
+        redisDao.setKey("name","test");
         redisDao.setKey("age","18");
        System.out.println(redisDao.getValue("name"));
        System.out.println(redisDao.getValue("age"));
